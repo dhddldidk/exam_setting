@@ -1,0 +1,23 @@
+-- 커피판매관
+DROP SCHEMA coffee_project1 RESTRICT;
+
+-- 커피판매관
+CREATE SCHEMA coffee_project1;
+
+-- 제품
+CREATE TABLE coffee_project1.product (
+	code char(4)     NOT NULL, 
+	name varchar(20) NULL,
+	primary key(code)      
+);
+
+-- 판매현황
+CREATE TABLE coffee_project1.sale (
+	no         INT(11) NOT NULL, 
+	code       char(4) NOT NULL, 
+	price      INT(11) NOT NULL, 
+	saleCnt    INT(11) NOT NULL, 
+	marginRate INT(11) NOT NULL,  
+	primary key(no),
+	foreign key(code) references product(code)
+);
