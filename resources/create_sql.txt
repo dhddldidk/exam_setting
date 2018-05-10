@@ -1,8 +1,11 @@
 -- 커피판매관
-DROP SCHEMA coffee_project1 RESTRICT;
+DROP SCHEMA if exists coffee_project1;
 
 -- 커피판매관
 CREATE SCHEMA coffee_project1;
+
+
+use coffee_project1;
 
 -- 제품
 CREATE TABLE coffee_project1.product (
