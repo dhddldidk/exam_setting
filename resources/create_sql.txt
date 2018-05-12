@@ -16,7 +16,7 @@ CREATE TABLE coffee_project1.product (
 
 -- 판매현황
 CREATE TABLE coffee_project1.sale (
-	no         INT(11) NOT NULL, 
+	no         INT(11) auto_increment, 
 	code       char(4) NOT NULL, 
 	price      INT(11) NOT NULL, 
 	saleCnt    INT(11) NOT NULL, 
@@ -24,3 +24,9 @@ CREATE TABLE coffee_project1.sale (
 	primary key(no),
 	foreign key(code) references product(code)
 );
+
+grant select, insert, update, delete, trigger, Execute 
+on coffee_project1.*
+to 'user_coffee' identified by 'rootroot';
+
+grant select on mysql.proc to 'user_coffee'@'%';
