@@ -71,7 +71,7 @@ public class BackUpService implements DaoService {
 
 	private void writeBackupFile(String result, String tblName) {
 		// 경로-BackupFiles
-		String resPath = System.getProperty("user.dir") + "\\BackupFiles\\" + tblName + ".csv";
+		String resPath = System.getProperty("user.dir") + "\\BackupFiles\\" + tblName + ".txt";
 
 		// 여기서 문제인 \를 /로 바꾸줌
 		resPath = resPath.replace("\\", "/");
@@ -104,5 +104,11 @@ public class BackUpService implements DaoService {
 			System.out.printf("%s Create Success! %n", backupDir.getName());
 		}
 
+	}
+
+	@Override
+	public void procedure() {
+		// TODO Auto-generated method stub
+		
 	}
 }

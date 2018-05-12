@@ -57,6 +57,7 @@ public class SettingMain extends JFrame {
 	public void initial() {
 		System.out.println("??????????????????");
 		InitService.getInstance().service();
+		InitService.getInstance().procedure();
 		JOptionPane.showMessageDialog(null, "초기화 완료");
 	}
 
